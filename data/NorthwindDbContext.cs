@@ -41,7 +41,7 @@ public partial class NorthwindDbContext : DbContext
 
     public virtual DbSet<Product> Products { get; set; }
 
-    public virtual DbSet<ProductDetails> ProductDetails { get; set; }
+    public virtual DbSet<ProductDetail> ProductDetails { get; set; }
 
     public virtual DbSet<Region> Regions { get; set; }
 
@@ -164,7 +164,7 @@ public partial class NorthwindDbContext : DbContext
             entity.Property(e => e.UnitPrice).HasColumnType(DecimalDbType);
         });
 
-        modelBuilder.Entity<ProductDetails>(entity =>
+        modelBuilder.Entity<ProductDetail>(entity =>
         {
             entity
                 .HasNoKey()
