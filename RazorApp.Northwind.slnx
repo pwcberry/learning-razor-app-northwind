@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/app/">
+    <Project Path="app/RazorApp.csproj" />
+  </Folder>
+  <Folder Name="/data/">
+    <Project Path="data/RazorApp.Data.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/RazorApp.Tests.csproj" />
+  </Folder>
+</Solution>
