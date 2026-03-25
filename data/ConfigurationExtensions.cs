@@ -8,8 +8,13 @@ public static class ConfigurationExtensions
     {
         public string? GetSqliteConnection()
         {
-            var path = configuration["Database:Path"];
+            var connection = configuration["ConnectionString"];
+            if (!string.IsNullOrEmpty(connection))
+            {
+                return connection;
+            }
 
+            var path = configuration["Database:Path"];
             return !string.IsNullOrEmpty(path) ? $"Data Source={path}" : null;
         }
     }
